@@ -29,6 +29,6 @@ https://python.land/data-processing/python-yaml
 ## Tests
 https://htmlpreview.github.io/?https://github.com/uriziv12/stl/blob/master/stl/test.html
 
-https://codebeautify.org/htmlviewer
+https://codebeautify.org/htmlviewer?url=https://raw.githubusercontent.com/uriziv12/stl/master/stl/test.html
 
 https://codebeautify.org/yaml-editor-online?url=https://raw.githubusercontent.com/uriziv12/stl/master/stl/test.yaml
