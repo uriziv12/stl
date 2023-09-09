@@ -27,8 +27,8 @@ https://www.beautifyconverter.com/yaml-to-html-converter.php
 https://python.land/data-processing/python-yaml
 
 ## Tests
-https://htmlpreview.github.io/?https://github.com/uriziv12/stl/blob/master/stl/test.html
+https://htmlpreview.github.io/?https://github.com/uriziv12/stl/blob/master/examples/test.html
 
-https://codebeautify.org/htmlviewer?url=https://raw.githubusercontent.com/uriziv12/stl/master/stl/test.html
+https://codebeautify.org/htmlviewer?url=https://raw.githubusercontent.com/uriziv12/stl/master/examples/test.html
 
-https://codebeautify.org/yaml-editor-online?url=https://raw.githubusercontent.com/uriziv12/stl/master/stl/test.yaml
+https://codebeautify.org/yaml-editor-online?url=https://raw.githubusercontent.com/uriziv12/stl/master/examples/test.yaml
