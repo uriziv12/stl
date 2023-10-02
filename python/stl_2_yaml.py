@@ -1,6 +1,7 @@
 
 import os
 import sys
+import io
 
 # TODO: add argsparse
 
@@ -19,10 +20,12 @@ stl_filepath = os.path.join(STL_ROOT_DIR, filename + STL_FILE_EXTENSION)
 yaml_filepath = os.path.join(YAML_ROOT_DIR, filename + YAML_FILE_EXTENSION)
 
 # Write yaml file based on stl file
+# yaml_f = open(yaml_filepath, "w+")
 yaml_f = open(yaml_filepath, "w+")
 
-with open(stl_filepath, 'rb') as stl_f:
+with io.open(stl_filepath, 'rb') as stl_f:
     for line_i in stl_f:
-        yaml_f.write(str(line_i))
+        decoded_line_i = line_i.decode("utf-8")
+        yaml_f.write(decoded_line_i)
 
 yaml_f.close()
