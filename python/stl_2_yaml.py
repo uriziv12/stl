@@ -2,6 +2,7 @@
 import os
 import sys
 import io
+import re
 
 # TODO: add argsparse
 
@@ -19,13 +20,20 @@ filename = sys.argv[1]
 stl_filepath = os.path.join(STL_ROOT_DIR, filename + STL_FILE_EXTENSION)
 yaml_filepath = os.path.join(YAML_ROOT_DIR, filename + YAML_FILE_EXTENSION)
 
-# Write yaml file based on stl file
-# yaml_f = open(yaml_filepath, "w+")
-yaml_f = open(yaml_filepath, "w+")
 
+def string_2_yaml_line(string_i):
+    regex_pttr = "(^\s*)(.*$)"
+    regex_result = re.search(regex_pttr, decoded_line_i)
+    leading_spaces_i = regex_result.group(1)
+    rest_of_line_i = regex_result.group(2)
+    return "{}\"{}\":\n".format(leading_spaces_i, rest_of_line_i)
+
+
+# Write yaml file based on stl file
+yaml_f = open(yaml_filepath, "w+")
 with io.open(stl_filepath, 'rb') as stl_f:
     for line_i in stl_f:
         decoded_line_i = line_i.decode("utf-8")
-        yaml_f.write(decoded_line_i)
-
+        yaml_line_i = string_2_yaml_line(decoded_line_i)
+        yaml_f.write(yaml_line_i)
 yaml_f.close()
