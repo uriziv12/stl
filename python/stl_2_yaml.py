@@ -20,7 +20,7 @@ filename = sys.argv[1]
 stl_filepath = os.path.join(STL_ROOT_DIR, filename + STL_FILE_EXTENSION)
 yaml_filepath = os.path.join(YAML_ROOT_DIR, filename + YAML_FILE_EXTENSION)
 
-
+# Functions
 def string_2_yaml_line(string_i):
     regex_pttr = "(^\s*)(.*$)"
     regex_result = re.search(regex_pttr, decoded_line_i)
