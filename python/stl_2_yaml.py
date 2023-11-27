@@ -22,9 +22,10 @@ yaml_filepath = os.path.join(YAML_ROOT_DIR, filename + YAML_FILE_EXTENSION)
 
 # Functions
 def string_2_yaml_line(string_i, prefix_for_text=None):
-    regex_pttr = "(^\s*)(.*$)"
+    regex_pttr = "(^[\s\.]*)(.*$)"
     regex_result = re.search(regex_pttr, decoded_line_i)
     leading_spaces_i = regex_result.group(1)
+    leading_spaces_i = " " * len(leading_spaces_i)
     rest_of_line_i = regex_result.group(2)
     ret_val = "{}\"{}\":\n".format(leading_spaces_i, rest_of_line_i)
     if prefix_for_text is not None:
